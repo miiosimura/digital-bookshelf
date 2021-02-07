@@ -48,9 +48,15 @@
                <input class="form-control me-2" type="search" placeholder="Encontre um livro ou autor" aria-label="Search">
                <button class="btn btn-outline-success" type="submit">Buscar</button>
             </form>
+               <% if current_admin %>
+                  <%# <a href="https://getbootstrap.com/docs/5.0/examples/album/#" class="btn btn-primary my-2">Cadastrar livro</a> %>
+                  <%= link_to 'Sair', destroy_admin_session_path, :method => :delete, :class => "btn btn-secondary my-2" %>
+               <% end %>
          </nav>
       </header>
 
+      <p><%= notice %></p>
+      <p><%= alert %></p>
       <%= yield %>
 
       <footer class="text-muted py-5">

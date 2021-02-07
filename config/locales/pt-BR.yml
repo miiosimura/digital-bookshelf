@@ -1,0 +1,12 @@
+pt-BR:
+  activerecord:
+    attributes:
+      admin:
+        email: E-mail
+        password: Senha
+        password_user_registration: Crie sua senha
+        password_confirmation: Confirme sua senha
+        current_password: Senha atual
+        remember_me: Lembrar-me
+        new_password: Nova senha
+        new_password_confirmation: Confirme sua nova senha
