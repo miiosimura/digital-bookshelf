@@ -1,6 +1,11 @@
 <div class="container">
   <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
     <div class="col p-4 d-flex flex-column position-static">
+      <% if current_admin %>
+        <div class="col-5">
+          <%= link_to 'Editar', edit_book_path(@book), :class => "btn btn-primary my-2" %>
+        </div>
+      <% end %>
       <h2 class="mb-0"><%= @book.title %></h2>
       <div class="mb-1 text-muted"><%= @book.author %></div><br/>
       <p class="card-text mb-auto"><%= @book.description %></p>
