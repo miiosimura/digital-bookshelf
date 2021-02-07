@@ -15,7 +15,7 @@
                         <%= link_to 'Ver detalhes', book_path(book), class: 'btn btn-sm btn-outline-secondary' %>
                         <% if current_admin %>
                           <%= link_to 'Editar', edit_book_path(book), class:"btn btn-sm btn-outline-secondary" %>
-                          <button type="button" class="btn btn-sm btn-outline-secondary">Excluir</button>
+                          <%= link_to 'Excluir', book_path(book), method: :delete, class: "btn btn-sm btn-outline-secondary" %>
                         <% end %>
                     </div>
                   </div>

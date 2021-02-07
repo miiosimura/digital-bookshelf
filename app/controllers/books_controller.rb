@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :authenticate_admin!, only: %i[new create edit update]
+  before_action :authenticate_admin!, only: %i[new create edit update destroy]
 
   def index
     @books = Book.all
@@ -33,6 +33,17 @@ class BooksController < ApplicationController
 
     if @book.update(params.require(:book).permit(:title, :author, :description, :image_url))
       flash[:notice] = 'Livro editado com sucesso!'
+      redirect_to @book
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @book = Book.find(params[:id])
+
+    if @book.destroy
+      flash[:notice] = 'Livro excluído com sucesso!'
       redirect_to @book
     else
       render :edit
