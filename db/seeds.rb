@@ -1,7 +1,49 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Book.create!(title: 'Arsène Lupin, O Ladrão De Casaca',
+             description: 'Arsène Lupin, o ladrão de Casaca é uma coletânea de nove histórias do escritor francês Maurice Leblanc que constituem as primeiras aventuras de Arsène Lupin. O editor da revista francesa Je sais tout encomendou a Maurice uma novela policial, cujo herói fosse para França o que era para a Inglaterra o detetive Sherlock Holmes, de Sir Arthur Conan Doyle. Nasceu assim Arsène Lupin, personagem vivo, audacioso, impertinente, desafiando sem cessar o Inspetor Ganimard, arrastando corações atrás de si, zombando das posições conquistadas e ridicularizando os burgueses, socorrendo os fracos, Arsène Lupin é um Robin Hood da Belle Époque. Nessa edição especial em capa dura, o leitor encontrará a versão integral do texto, traduzido diretamente do francês. Acompanham pôster e marcador exclusivo.',
+             image_url: 'http://lojasaraiva.vteximg.com.br/arquivos/ids/31752915/POSTER_LUPIN-copia_Easy-Resize.com.jpg?v=637477989095230000',
+             author: 'Maurice Leblanc')
+
+Book.create!(title: 'Mais Esperto Que o Diabo',
+             description: 'Napoleon Hill revela que quebrou o código mental do diabo e o forçou a confessar os seus segredos. O manuscrito que resultou deste feito - "Mais Esperto que o Diabo"- mostrou-se tão controverso, que acabou escondido por mais de 70 anos. Usando sua habilidade legendária para chegar a raiz do potencial humano, Hill cava profundamente para identificar os maiores obstáculos que enfrentamos na busca de nossas metas pessoais - incluindo o medo, procrastinação, a raiva e a inveja - como ferramentas orquestradas pelo próprio diabo. Esses métodos ocultos de controle podem levar-nos a ruína, e Hill revela os 7 princípios que eficazmente poderão combater a alienação e levar-nos finalmente ao triunfo e ao sucesso. Fascinante, provocativo e encorajador, "Mais Esperto que o Diabo" mostra como criar a sua própria senha para o sucesso, harmonia e realização em um momento de tantas incertezas e medos.',
+             image_url: 'http://lojasaraiva.vteximg.com.br/arquivos/ids/12104802/1009575881.jpg?v=637142231559930000',
+             author: 'Napoleon Hill')
+
+Book.create!(title: 'Mindset',
+             description: 'Carol S. Dweck, professora de psicologia na Universidade Stanford e especialista internacional em sucesso e motivação, desenvolveu, ao longo de décadas de pesquisa, um conceito fundamental: a atitude mental com que encaramos a vida, que ela chama de “mindset”, é crucial para o sucesso. Dweck revela de forma brilhante como o sucesso pode ser alcançado pela maneira como lidamos com nossos objetivos. O “mindset” não é um mero traço de personalidade, é a explicação de por que somos otimistas ou pessimistas, bem-sucedidos ou não. Ele define nossa relação com o trabalho e com as pessoas e a maneira como educamos nossos filhos. É um fator decisivo para que todo o nosso potencial seja explorado.',
+             image_url: 'http://lojasaraiva.vteximg.com.br/arquivos/ids/12109004/1008976499.jpg?v=637142247801500000',
+             author: 'Carol Dweck')
+
+Book.create!(title: 'O Tatuador De Auschwitz',
+             description: 'A incrível história, baseada em fatos, de um amor que os cruéis muros de Auschwitz não foram capazes de impedir Nesse romance histórico, um testemunho da coragem daqueles que ousaram enfrentar o sistema da Alemanha nazista, o leitor será conduzido pelos horrores vividos dentro dos campos de concentração da Alemanha nazista e verá que o amor não pode ser limitado por muros e cercas. Lale Sokolov e Gita Fuhrmannova, dois judeus eslovacos, se conheceram em um dos mais terríveis lugares que a humanidade já viu: o campo de concentração e extermínio de Auschwitz, durante a Segunda Guerra Mundial. No campo, Lale foi incumbido de tatuar os números de série dos prisioneiros que chegavam, trazidos pelos nazistas – literalmente marcando na pele das vítimas o que se tornaria um grande símbolo do Holocausto. Ainda que fosse acusado de compactuar com os carcereiros, Lale, no entanto, aproveitava sua posição privilegiada para ajudar outros prisioneiros, trocando joias e dinheiro por comida para mantê-los vivos e designando funções administrativas para poupar seus companheiros do trabalho braçal do campo. Nesse ambiente, feito para destruir tudo o que nele tocasse, Lale e Gita viveram um amor proibido, permitindo-se viver mesmo sabendo que a morte era iminente.',
+             image_url: 'http://lojasaraiva.vteximg.com.br/arquivos/ids/12564499/1010073032.jpg?v=637152462077370000',
+             author: 'Heather Morris')
+
+Book.create!(title: '1984',
+             description: 'Ao lado de “A Revolução dos Bichos”, o livro “1984” é um dos mais famosos de George Orwell. A obra já ganhou versões de filmes, minisséries, quadrinhos, traduções para 65 países e uma polêmica fama, que não é à toa! Em seu último romance, o autor criou um personagem chamado Winston, que vive aprisionado em uma sociedade completamente dominada pelo Estado. Essa submissão ao poder, é relatada, inclusive, na rotina desse personagem, que trabalha com a falsificação de registos históricos, a fim de satisfazer os interesses presentes. Winston, contudo, não aceita bem essa realidade, que se disfarça de democracia, e vive questionando a opressão que o Partido e o Grande Irmão exercem sob a sociedade. A inspiração do livro vem dos regimes totalitários das décadas de 30 e 40 e, é assim, sob a ótica da ficção, que o autor faz com que seus leitores reflitam sobre o sistema de controle, que depois de tanto tempo ainda é muito questionado.',
+             image_url: 'http://lojasaraiva.vteximg.com.br/arquivos/ids/12101548/1008972955.jpg?v=637142220125430000',
+             author: 'George Orwell')
+
+Book.create!(title: 'Harry Potter e A Pedra Filosofal',
+             description: 'Harry Potter é um garoto cujos pais, feiticeiros, foram assassinados por um poderosíssimo bruxo quando ele ainda era um bebê. Ele foi levado, então, para a casa dos tios que nada tinham a ver com o sobrenatural. Pelo contrário. Até os 10 anos, Harry foi uma espécie de gata borralheira: maltratado pelos tios, herdava roupas velhas do primo gorducho, tinha óculos remendados e era tratado como um estorvo. No dia de seu aniversário de 11 anos, entretanto, ele parece deslizar por um buraco sem fundo, como o de Alice no país das maravilhas, que o conduz a um mundo mágico. Descobre sua verdadeira história e seu destino: ser um aprendiz de feiticeiro até o dia em que terá que enfrentar a pior força do mal, o homem que assassinou seus pais. O menino de olhos verde, magricela e desengonçado, tão habituado à rejeição, descobre, também, que é um herói no universo dos magos. Potter fica sabendo que é a única pessoa a ter sobrevivido a um ataque do tal bruxo do mal e essa é a causa da marca em forma de raio que ele carrega na testa. Ele não é um garoto qualquer, ele sequer é um feiticeiro qualquer; ele é Harry Potter, símbolo de poder, resistência e um líder natural entre os sobrenaturais. A fábula, recheada de fantasmas, paredes que falam, caldeirões, sapos, unicórnios, dragões e gigantes, não é, entretanto, apenas um passatempo.',
+             image_url: 'http://lojasaraiva.vteximg.com.br/arquivos/ids/12110250/1007739147.jpg?v=637142252496370000',
+             author: 'J. K. Rowling')
+
+Book.create!(title: 'Harry Potter e A Câmara Secreta',
+             description: 'Depois de férias aborrecidas na casa dos tios trouxas, está na hora de Harry Potter voltar a estudar. Coisas acontecem, no entanto, para dificultar o regresso de Harry. Persistente e astuto, o herói não se deixa intimidar pelos obstáculos e, com a ajuda dos fiéis amigos Weasley, começa o ano letivo na Escola de Magia e Bruxaria de Hogwarts. As novidades não são poucas. Novos colegas, novos professores, muitas e boas descobertas e um grande e perigosos desafio. Alguém ou alguma coisa ameaça a segurança e a tranquilidade dos membros de Hogwarts.',
+             image_url: 'http://lojasaraiva.vteximg.com.br/arquivos/ids/12110251/1008325486.jpg?v=637142252498230000',
+             author: 'J. K. Rowling')
+
+Book.create!(title: 'Harry Potter e O Prisioneiro De Azkaban',
+             description: 'As aulas estão de volta à Hogwarts e Harry Potter não vê a hora de embarcar no expresso a vapor que o levará de volta à escola de bruxaria. Mais uma vez suas férias na rua dos Alfeneiros foi triste e solitária. Com muita ação, humor e magia, Harry Potter e o prisioneiro de Azkaban traz de volta o gigante atrapalhado Rúbeo Hagrid, o sábio diretor Alvo Dumbledore, a exigente professora de transformação Minerva MacGonagall e o novo mestre Lupin, que guarda grandes surpresas para Harry.',
+             image_url: 'http://lojasaraiva.vteximg.com.br/arquivos/ids/12110252/1007804406.jpg?v=637142252500600000',
+             author: 'J. K. Rowling')
+
+Book.create!(title: 'O Diário De Anne Frank',
+             description: 'Publicado pela primeira vez em 1947, “O diário de Anne Frank” é um best-seller mundial. Um relato emocionante e de extrema relevância até hoje, o livro já foi publicado em mais de 60 idiomas e nos conduz pelas experiências da jovem Anne Frank, que, junto com a sua família, vai morar num bunker para se esconder do regime nazista vigente na Alemanha de Hitler. Infelizmente, a família não resistiu ao Holocausto, e Anne morreu com apenas 16 anos. Mas seu diário, agora em edição com trechos exclusivos, eternaliza essa importante história, tornando-se, não por acaso, um dos livros mais lidos no mundo.',
+             image_url: 'http://lojasaraiva.vteximg.com.br/arquivos/ids/31729264/O-diario-de-Anne-Frank_CAPA-B_Easy-Resize.com.jpg?v=637383699161100000',
+             author: 'Anne Frank')
+
+Book.create!(title: 'O Homem De Giz',
+             description: 'Assassinato e sinais misteriosos em uma trama para fãs de Stranger Things e Stephen King Em 1986, Eddie e os amigos passam a maior parte dos dias andando de bicicleta pela pacata vizinhança em busca de aventuras. Os desenhos a giz são seu código secreto: homenzinhos rabiscados no asfalto; mensagens que só eles entendem. Mas um desenho misterioso leva o grupo de crianças até um corpo desmembrado e espalhado em um bosque. Depois disso, nada mais é como antes. Em 2016, Eddie se esforça para superar o passado, até que um dia ele e os amigos de infância recebem um mesmo aviso: o desenho de um homem de giz enforcado. Quando um dos amigos aparece morto, Eddie tem certeza de que precisa descobrir o que de fato aconteceu trinta anos atrás. Alternando habilidosamente entre presente e passado, O Homem de Giz traz o melhor do suspense: personagens maravilhosamente construídos, mistérios de prender o fôlego e reviravoltas que vão impressionar até os leitores mais escaldados.',
+             image_url: 'http://lojasaraiva.vteximg.com.br/arquivos/ids/8240485/1007028324.jpg?v=637099729321500000',
+             author: 'C. J. Tudor')
