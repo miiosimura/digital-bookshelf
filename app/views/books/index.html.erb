@@ -1,0 +1,38 @@
+<%# <section class="py-5 text-center container">
+  <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <p class="lead text-muted">Em busca de algum livro? Aqui você pode encontra-lo!</p>
+        <p>
+            <a href="https://getbootstrap.com/docs/5.0/examples/album/#" class="btn btn-primary my-2">Order</a>
+            <a href="https://getbootstrap.com/docs/5.0/examples/album/#" class="btn btn-secondary my-2">Secondary action</a>
+        </p>
+      </div>
+  </div>
+</section> %>
+<div class="album py-5 bg-light">
+  <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <% @books.each do |book| %>
+        <div class="col">
+            <div class="card shadow-sm">
+              <center>
+                  <%= image_tag book.image_url, size: "220x300"%>
+              </center>
+              <div class="card-body">
+                  <p class="card-text" stylesheet='text-align: center'><%= book.title %></p>
+                  <p class="card-text" stylesheet='text-align: center;'>Autor: <%= book.author %></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <%= link_to 'Ver detalhes', book_path(book), class: 'btn btn-sm btn-outline-secondary' %>
+                        <% if current_admin %>
+                          <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
+                        <% end %>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+        <% end %>
+      </div>
+  </div>
+</div>
