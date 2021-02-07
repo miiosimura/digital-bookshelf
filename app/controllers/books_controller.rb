@@ -2,7 +2,7 @@ class BooksController < ApplicationController
   before_action :authenticate_admin!, only: %i[new create edit update destroy]
 
   def index
-    @books = Book.all
+    @books = searcher(params[:search]) || Book.all
   end
 
   def show
@@ -48,5 +48,15 @@ class BooksController < ApplicationController
     else
       render :edit
     end
+  end
+
+  private
+  def searcher(search)
+    return unless search
+
+    Book.where('LOWER(title) LIKE :search_term '\
+               'OR LOWER(description) LIKE :search_term '\
+               'OR LOWER(author) LIKE :search_term',
+               search_term: "%#{search.downcase}%")
   end
 end
