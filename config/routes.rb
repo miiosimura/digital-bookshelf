@@ -2,5 +2,5 @@ Rails.application.routes.draw do
   devise_for :admins
 
   root to: 'books#index'
-  resources :books, only: [:show]
+  resources :books, only: [:show, :new, :create]
 end

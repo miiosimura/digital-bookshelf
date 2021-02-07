@@ -1,0 +1,36 @@
+<body class="bg-light">
+  <div class="container">
+      <main>
+        <div class="py-5 text-center">
+            <h2>Cadastrar livro</h2>
+        </div>
+        <div class="row g-12">
+            <div class="col-md-12 col-lg-12">
+              <%= form_with model: @book, local: true do |b| %>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                        <label for="title" class="form-label">Título</label>
+                        <%= b.text_field :title, class:"form-control" %>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="author" class="form-label">Autor</label>
+                        <%= b.text_field :author, class:"form-control" %>
+                    </div>
+                    <div class="col-12">
+                      <label for="description">Descrição</label>
+                      <%= b.text_area(:description, class:"form-control") %>
+                    </div>
+                    <div class="col-12">
+                        <label for="address" class="form-label">URL da imagem</label>
+                        <%= b.text_field :image_url, class:"form-control" %>
+                    </div>
+
+                  </div>
+                  <hr class="my-4">
+                  <%= b.submit 'Cadastrar', class:"w-100 btn btn-primary btn-lg" %>
+              <% end %>
+            </div>
+        </div>
+      </main>
+  </div>
+</body>
