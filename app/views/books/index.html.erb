@@ -1,8 +1,21 @@
 <div class="album py-5 bg-light">
   <div class="container">
-    <%= form_tag books_path, method: :get, class: "d-flex", :id => "search_form" do %>
-      <%= text_field_tag :search, params[:search], placeholder:"Encontre um livro ou autor", class: "form-control me-2" %>
-    <% end %>
-    <div id="books"><%= render 'preview' %></div>
+      <%= form_for books_path, method: :get, remote: true, class: "d-flex", :id => "search_form" do %>
+        <div class="d-flex">
+          <%= text_field_tag :search, params[:search], placeholder:"Encontre um livro ou autor", class: "form-control me-2" %>
+          <%= submit_tag "Buscar", :name => nil, class: "btn btn-outline-success" %>
+        </div>
+        <br/>
+        <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="input-group">
+            <div class="input-group-text">Ordenar por:</div>
+          </div>
+          <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+            <button name="order" type="submit" value="asc" class='btn btn-outline-primary'>Crescente</button>
+            <button name="order" type="submit" value="desc" class='btn btn-outline-primary'>Decrescente</button>
+          </div>
+        </div>
+      <% end %>
+      <div id="books"><%= render 'preview' %></div>
   </div>
 </div>

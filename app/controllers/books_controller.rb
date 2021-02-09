@@ -3,6 +3,7 @@ class BooksController < ApplicationController
 
   def index
     @books = searcher(params[:search]) || Book.all
+    @books = @books.order(title: params[:order].to_sym) if params[:order]
   end
 
   def show
