@@ -8,7 +8,12 @@ class BooksController < ApplicationController
   end
 
   def show
-    @book = Book.find(params[:id])
+    @book = Book.find_by(id: params[:id])
+
+    return @book if @book.present?
+
+    flash[:notice] = 'Livro não encontrado'
+    redirect_to root_path
   end
 
   def new
@@ -46,9 +51,9 @@ class BooksController < ApplicationController
 
     if @book.destroy
       flash[:notice] = 'Livro excluído com sucesso!'
-      redirect_to @book
+      redirect_to books_path
     else
-      render :edit
+      render @book
     end
   end
 
