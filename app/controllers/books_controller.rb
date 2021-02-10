@@ -27,6 +27,7 @@ class BooksController < ApplicationController
       flash[:notice] = 'Novo livro cadastrado com sucesso!'
       redirect_to @book
     else
+      flash[:alert] = 'Atenção: Todos os campos precisam ser preenchidos'
       render :new
     end
   end
@@ -42,6 +43,7 @@ class BooksController < ApplicationController
       flash[:notice] = 'Livro editado com sucesso!'
       redirect_to @book
     else
+      flash[:alert] = 'Atenção: Todos os campos precisam ser preenchidos'
       render :edit
     end
   end
@@ -52,8 +54,6 @@ class BooksController < ApplicationController
     if @book.destroy
       flash[:notice] = 'Livro excluído com sucesso!'
       redirect_to books_path
-    else
-      render @book
     end
   end
 

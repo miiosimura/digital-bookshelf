@@ -121,6 +121,27 @@ RSpec.describe BooksController, type: :controller do
       end
     end
 
+    context 'when a book does not have all fields filled' do
+      setup { sign_in admin }
+      before do
+        post :create,
+             params: {
+               book: {
+                 title: 'Livro X',
+                 author: 'Mary Anne',
+                 description: 'Livro X',
+                 image_url: ''
+               }
+             }
+      end
+      subject { response }
+
+      it { is_expected.to have_http_status(:ok) }
+      it 'show alert message' do
+        expect(response.body).to have_content('Atenção: Todos os campos precisam ser preenchidos')
+      end
+    end
+
     context 'when a user is not an admin' do
       before do
         post :create,
@@ -185,6 +206,25 @@ RSpec.describe BooksController, type: :controller do
       end
       it 'updates the book`s author' do
         expect(book.reload.author).to eq('Eren Jaeger')
+      end
+    end
+
+    context 'when a book does not have all fields filled' do
+      setup { sign_in admin }
+      before do
+        put :update,
+            params: {
+              id: book.id,
+              book: {
+                author: '',
+              }
+            }
+      end
+      subject { response }
+
+      it { is_expected.to have_http_status(:ok) }
+      it 'show alert message' do
+        expect(response.body).to have_content('Atenção: Todos os campos precisam ser preenchidos')
       end
     end
 
